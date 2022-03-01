@@ -1,0 +1,146 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+/* BASE */
+::before,
+::after,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+    color: #f1f1f1;
+    user-select: none;
+}
+
+.container {
+    background-image:linear-gradient(to bottom right,var(--tw-gradient-stops));
+    --tw-gradient-from:#111827;
+    --tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to, rgba(17, 24, 39, 0));
+    --tw-gradient-to:#1e40af;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1100px;
+    height: 70%;
+    border-radius: 30px;
+    overflow-x: hidden;
+}
+
+.container::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+    background-color: #585858;
+    border-radius: 1em;
+}
+
+.container::-webkit-scrollbar-thumb {
+    border-radius: 1em;
+    background-color: #c1c1c1;
+    border: 3px solid #585858;
+}
+
+.container::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+/* AMMUNATION */
+.title {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galerie {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 95%;
+  max-width: 1400px;
+  margin: 20px auto 0;
+}
+
+.item {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 280px;
+  margin: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.item_buy {
+    padding: 10px 25px;
+    background: #AA8C64;
+    border: 2px solid #AA8C64;
+    border-radius: 5px;
+    margin-top: 1em;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.item_buy:hover {
+    background: transparent;
+    color: #AA8C64;
+    transition: 0.3s;
+}
+
+.detail-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.detail-content > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.detail-content:hover {
+    opacity: 1;
+}
+
+.detail-content:hover > * {
+    transform: translateY(0);
+}
+
+.item img {
+    width: 115px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.item img:hover {
+    width: 140px;
+    transition: 0.3s;
+}
+
+.item_label {
+    font-size: 38px;
+}
+
+.item_price {
+    font-size: 28px;
+    color: #04ad04;
+}
+
+/* Copyright (c) 2022 COSSART - LazyDev */
